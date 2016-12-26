@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<head>
+    <title>Check Names</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <script src="js/angular.min.js"></script>
+    <!--<script src="js/angular-sanitize.js"></script>-->
+    <script src="js/appp.js"></script>
+    <style>
+        .message {
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body ng-app="CheckNames">
+    <div class="container" ng-controller="NCController">
+        <h1>Names Checker</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <input ng-model="name1" type="text" placeholder="first name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <input ng-model="name2" type="text" placeholder="second name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <button ng-click="checkNames()" class="btn btn-primary">Check Names</button>
+                </div>
+                <div class="message">
+                    {{result}}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
